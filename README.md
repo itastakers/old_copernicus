@@ -1,6 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Atlas
 
-## Getting Started
+Cosmos Network testnets, upgrades, validators and peers tracker.
+
+## Purpose
+
+[Cosmos Network](https://cosmos.network) is massive, just like our real universe. Is expanding every single day, and keeping track of the upcoming incentivized testnets or upgrades is getting difficult for most of the validators in the ecosystem. Atlas will help in this process, having a single place to look at without following 300 telegram or discord groups.
+
+## Projects submissions
+
+If one of your favorite projects, testnet or anything is missing, simply create a pull request to this repository! We created an handy json / markdown structure to keep track of changes. Pull reuqests are reviewd quickly and merged as long as they don't contain spam or fraudlent links.
+
+## Development
 
 First, run the development server:
 
