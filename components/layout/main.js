@@ -5,6 +5,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { CssBaseline } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -54,6 +55,31 @@ export default function MainLayout({ children }) {
       </AppBar>
 
       <main>{children}</main>
+
+      {/* Footer */}
+      <footer className={classes.footer}>
+        <Typography variant="h6" align="center" gutterBottom>
+          Atlas Cosmos Tracker
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          color="textSecondary"
+          component="p"
+        >
+          Made for the community by{" "}
+          <Link color="inherit" href="https://www.itastakers.com/">
+            🇮🇹 ITA Stakers
+          </Link>
+          <Typography variant="body2" color="textSecondary" align="center">
+            Contribute to this project on{" "}
+            <Link color="inherit" href="https://github.com/itastakers/atlas">
+              GitHub
+            </Link>
+          </Typography>
+        </Typography>
+      </footer>
+      {/* End footer */}
     </>
   );
 }
