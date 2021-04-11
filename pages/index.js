@@ -87,12 +87,14 @@ export default function Home() {
                 </CardContent>
                 <CardActions>
                   <Button
+                    href={feature.url}
                     disabled={feature.disabled}
                     size="small"
                     variant="contained"
                     color="primary"
                   >
-                    View
+                    {feature.disabled && "Coming Soon"}
+                    {!feature.disabled && "View"}
                   </Button>
                 </CardActions>
               </Card>
