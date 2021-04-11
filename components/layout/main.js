@@ -71,12 +71,12 @@ export default function MainLayout({ children }) {
           <Link color="inherit" href="https://www.itastakers.com/">
             🇮🇹 ITA Stakers
           </Link>
-          <Typography variant="body2" color="textSecondary" align="center">
-            Contribute to this project on{" "}
-            <Link color="inherit" href="https://github.com/itastakers/atlas">
-              GitHub
-            </Link>
-          </Typography>
+        </Typography>
+        <Typography variant="body2" color="textSecondary" align="center">
+          Contribute to this project on{" "}
+          <Link color="inherit" href="https://github.com/itastakers/atlas">
+            GitHub
+          </Link>
         </Typography>
       </footer>
       {/* End footer */}
