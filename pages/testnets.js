@@ -3,6 +3,7 @@ import HeroComponent from "../components/hero";
 import MainLayout from "../components/layout/main";
 import { DataGrid } from "@material-ui/data-grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import testnets from "../atlas/testnets.json";
 
 const columns = [
   { field: "name", headerName: "Name", flex: 1 },
@@ -47,39 +48,6 @@ const columns = [
   },
 ];
 
-const rows = [
-  {
-    id: 0,
-    name: "Agoric",
-    description: "Incentivized testnet, 5 phases with different objectives",
-    sdk_version: "v0.40 >",
-    incentivized: true,
-    start_date: "2021-02-25",
-    end_date: "2021-05-25",
-    status: "active",
-    links: [
-      {
-        icon_type: "fab",
-        icon: "github",
-        tooltip: "Repository",
-        url: "https://github.com/Agoric/agoric-sdk/",
-      },
-      {
-        icon_type: "fas",
-        icon: "book",
-        tooltip: "Documentation",
-        url: "https://validate.agoric.com/",
-      },
-      {
-        icon_type: "fab",
-        icon: "discord",
-        tooltip: "Discord",
-        url: "https://agoric.com/discord",
-      },
-    ],
-  },
-];
-
 export default function Testnets() {
   return (
     <MainLayout>
@@ -94,13 +62,22 @@ export default function Testnets() {
           >
             Cosmos Testnet Tracker
           </Typography>
+          <Typography align="center" color="textPrimary" gutterBottom>
+            This list is managed by the community. If your favorite project is
+            missing, don't hesitate to open a pull request in{" "}
+            <Link href="https://github.com/itastakers/atlas/blob/main/atlas/testnets.json">
+              this repository
+            </Link>
+            . Pull requests will be reviewed quickly and merged as long they
+            don't contain spam or fraudolent links.
+          </Typography>
         </Container>
       </HeroComponent>
 
       <Container maxWidth="xl">
         <DataGrid
           autoHeight
-          rows={rows}
+          rows={testnets}
           columns={columns}
           pageSize={50}
           disableColumnMenu

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "name": "Agoric",
+    "description": "Incentivized testnet, 5 phases with different objectives",
+    "sdk_version": "v0.40 >",
+    "incentivized": true,
+    "start_date": "2021-02-25",
+    "end_date": "2021-05-25",
+    "status": "active",
+    "links": [
+      {
+        "icon_type": "fab",
+        "icon": "github",
+        "tooltip": "Repository",
+        "url": "https://github.com/Agoric/agoric-sdk/"
+      },
+      {
+        "icon_type": "fas",
+        "icon": "book",
+        "tooltip": "Documentation",
+        "url": "https://validate.agoric.com/"
+      },
+      {
+        "icon_type": "fab",
+        "icon": "discord",
+        "tooltip": "Discord",
+        "url": "https://agoric.com/discord"
+      }
+    ]
+  }
+]
