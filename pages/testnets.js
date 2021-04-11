@@ -6,10 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import testnets from "../atlas/testnets.json";
 import CheckIcon from "@material-ui/icons/Check";
 import ClearIcon from "@material-ui/icons/Clear";
+import { useEffect, useState } from "react";
+import { shuffleArray } from "../utils/arrays";
 
 const columns = [
-  { field: "name", headerName: "Name", flex: 1 },
-  { field: "description", headerName: "Description", flex: 2 },
+  { field: "name", headerName: "Name", flex: 2 },
   { field: "sdk_version", headerName: "SDK Version", flex: 0.7 },
   {
     field: "incentivized",
@@ -62,6 +63,13 @@ const columns = [
 ];
 
 export default function Testnets() {
+  var [rows, setRows] = useState([]);
+
+  useEffect(() => {
+    const r = shuffleArray(testnets.map((obj) => ({ ...obj, id: obj.name })));
+    setRows(r);
+  }, [testnets]);
+
   return (
     <MainLayout>
       <HeroComponent>
@@ -90,7 +98,7 @@ export default function Testnets() {
       <Container maxWidth="xl">
         <DataGrid
           autoHeight
-          rows={testnets}
+          rows={rows}
           columns={columns}
           pageSize={50}
           disableColumnMenu
