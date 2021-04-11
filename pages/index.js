@@ -1,15 +1,61 @@
-import { Button, Container, Grid, Typography } from "@material-ui/core";
+import {
+  Button,
+  Container,
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+  CardActions,
+  CardMedia,
+} from "@material-ui/core";
 import HeroComponent from "../components/hero";
 import MainLayout from "../components/layout/main";
+import { makeStyles } from "@material-ui/core/styles";
+import { features } from "../atlas/configuration";
+
+const useStyles = makeStyles((theme) => ({
+  icon: {
+    marginRight: theme.spacing(2),
+  },
+  heroContent: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(8, 0, 6),
+  },
+  heroButtons: {
+    marginTop: theme.spacing(4),
+  },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
+  card: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+  },
+  cardMedia: {
+    paddingTop: "56.25%", // 16:9
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(6),
+  },
+}));
+
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Home() {
+  const classes = useStyles();
   return (
     <MainLayout>
       <HeroComponent>
         <Container maxWidth="sm">
           <Typography
             component="h1"
-            variant="h2"
+            variant="h1"
             align="center"
             color="textPrimary"
             gutterBottom
@@ -24,22 +70,36 @@ export default function Home() {
           >
             Track testnets, upgrades, peers and validators of Cosmos Network.
           </Typography>
-          <div className="">
-            <Grid container spacing={2} justify="center">
-              <Grid item>
-                <Button variant="contained" color="primary">
-                  Main call to action
-                </Button>
-              </Grid>
-              <Grid item>
-                <Button variant="outlined" color="primary">
-                  Secondary action
-                </Button>
-              </Grid>
-            </Grid>
-          </div>
         </Container>
       </HeroComponent>
+
+      <Container className={classes.cardGrid} maxWidth="md">
+        {/* End hero unit */}
+        <Grid container spacing={4}>
+          {features.map((feature) => (
+            <Grid item key={feature.url} xs={12} sm={6} md={4}>
+              <Card className={classes.card}>
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {feature.title}
+                  </Typography>
+                  <Typography>{feature.description}</Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    disabled={feature.disabled}
+                    size="small"
+                    variant="contained"
+                    color="primary"
+                  >
+                    View
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </MainLayout>
   );
 }
