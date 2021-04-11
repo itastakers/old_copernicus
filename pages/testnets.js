@@ -4,12 +4,25 @@ import MainLayout from "../components/layout/main";
 import { DataGrid } from "@material-ui/data-grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import testnets from "../atlas/testnets.json";
+import CheckIcon from "@material-ui/icons/Check";
+import ClearIcon from "@material-ui/icons/Clear";
 
 const columns = [
   { field: "name", headerName: "Name", flex: 1 },
   { field: "description", headerName: "Description", flex: 2 },
   { field: "sdk_version", headerName: "SDK Version", flex: 0.7 },
-  { field: "incentivized", headerName: "Incentivized", flex: 0.7 },
+  {
+    field: "incentivized",
+    headerName: "Incentivized",
+    flex: 0.7,
+    renderCell: ({ value }) => {
+      if (value === true) {
+        return <CheckIcon style={{ color: "green" }} />;
+      } else {
+        return <ClearIcon style={{ color: "red" }} />;
+      }
+    },
+  },
   { field: "start_date", headerName: "Start date", type: "date", flex: 1 },
   { field: "end_date", headerName: "End date", type: "date", flex: 1 },
   {
