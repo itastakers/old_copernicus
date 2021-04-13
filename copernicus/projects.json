@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Sentinel",
+    "project_id": "sentinel-official",
+    "status": "active",
+    "links": [
+      {
+        "icon_type": "fab",
+        "icon": "github",
+        "tooltip": "Repository",
+        "url": "https://github.com/sentinel-official"
+      },
+      {
+        "icon_type": "fab",
+        "icon": "medium",
+        "tooltip": "Medium Article",
+        "url": "https://medium.com/sentinel/sentinels-genesis-validators-6462af1fde52"
+      },
+      {
+        "icon_type": "fab",
+        "icon": "discord",
+        "tooltip": "Discord",
+        "url": "https://discord.gg/bHJbar4"
+      },
+      {
+        "icon_type": "fab",
+        "icon": "telegram",
+        "tooltip": "Telegram",
+        "url": "https://t.me/sentinel_co"
+      }
+    ]
+  },
+  {
+    "name": "Bitsong",
+    "project_id": "bitsongofficial",
+    "chain_id": "bitsong-1",
+    "sdk_version": "v0.39",
+    "incentivized": false,
+    "start_date": "2021-03-26",
+    "end_date": "-",
+    "status": "active",
+    "links": [
+      {
+        "icon_type": "fab",
+        "icon": "github",
+        "tooltip": "Repository",
+        "url": "https://github.com/bitsongofficial"
+      },
+      {
+        "icon_type": "fab",
+        "icon": "medium",
+        "tooltip": "Medium Article",
+        "url": "https://bitsongofficial.medium.com/mainnet-update-how-to-stake-guide-17e29f137f57"
+      },
+      {
+        "icon_type": "fab",
+        "icon": "discord",
+        "tooltip": "Discord",
+        "url": "https://discord.gg/mZC9Yk3"
+      },
+      {
+        "icon_type": "fab",
+        "icon": "telegram",
+        "tooltip": "Telegram",
+        "url": "https://t.me/BitSongOfficial"
+      }
+    ]
+  }
+]
