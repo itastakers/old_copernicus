@@ -1,16 +1,33 @@
 import { Chip, Container, Link, Typography } from "@material-ui/core";
-import HeroComponent from "../components/hero";
-import MainLayout from "../components/layout/main";
+import HeroComponent from "components/hero";
+import MainLayout from "components/layout/main";
 import { DataGrid } from "@material-ui/data-grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import testnets from "../copernicus/testnets.json";
+import testnets from "copernicus/testnets.json";
 import CheckIcon from "@material-ui/icons/Check";
 import ClearIcon from "@material-ui/icons/Clear";
 import { useEffect, useState } from "react";
-import { shuffleArray } from "../utils/arrays";
+import { shuffleArray } from "utils/arrays";
 
 const columns = [
-  { field: "name", headerName: "Name", flex: 1 },
+  {
+    field: "name",
+    headerName: "Name",
+    flex: 1,
+    renderCell: (params) => {
+      let project_id = params.getValue('project_id')
+      let link = typeof project_id !== 'undefined' && project_id !== null && project_id !== "" ? project_id : "#"
+      return (
+      <Link
+        target=""
+        rel="noopener noreferrer"
+        href={"testnets/"+link}
+        color="primary"
+      >
+      {params.value}
+      </Link>
+    )},
+  },
   { field: "project_id", headerName: "Project", flex: 1 },
   { field: "chain_id", headerName: "Chain", flex: 1 },
   { field: "sdk_version", headerName: "SDK Version", flex: 0.7 },
@@ -55,7 +72,11 @@ const columns = [
           id={i.icon}
           color="primary"
           title={i.tooltip}
-          style={{ marginInlineEnd: 10, fontSize: "large", verticalAlign: "middle" }}
+          style={{
+            marginInlineEnd: 10,
+            fontSize: "large",
+            verticalAlign: "middle",
+          }}
         >
           <FontAwesomeIcon icon={[i.icon_type, i.icon]} />
         </Link>
