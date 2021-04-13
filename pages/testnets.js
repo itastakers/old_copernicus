@@ -3,14 +3,16 @@ import HeroComponent from "../components/hero";
 import MainLayout from "../components/layout/main";
 import { DataGrid } from "@material-ui/data-grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import testnets from "../atlas/testnets.json";
+import testnets from "../copernicus/testnets.json";
 import CheckIcon from "@material-ui/icons/Check";
 import ClearIcon from "@material-ui/icons/Clear";
 import { useEffect, useState } from "react";
 import { shuffleArray } from "../utils/arrays";
 
 const columns = [
-  { field: "name", headerName: "Name", flex: 2 },
+  { field: "name", headerName: "Name", flex: 1 },
+  { field: "project_id", headerName: "Project", flex: 1 },
+  { field: "chain_id", headerName: "Chain", flex: 1 },
   { field: "sdk_version", headerName: "SDK Version", flex: 0.7 },
   {
     field: "incentivized",
@@ -53,7 +55,7 @@ const columns = [
           id={i.icon}
           color="primary"
           title={i.tooltip}
-          style={{ marginRight: 10 }}
+          style={{ marginInlineEnd: 10, fontSize: "large", verticalAlign: "middle" }}
         >
           <FontAwesomeIcon icon={[i.icon_type, i.icon]} />
         </Link>
