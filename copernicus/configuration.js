@@ -11,7 +11,7 @@ export const features = [
     description: "Track upcoming network or security upgrades",
     url: "/upgrades",
     image: null,
-    disabled: false,
+    disabled: true,
   },
   {
     title: "Peers Tracker",
@@ -19,7 +19,7 @@ export const features = [
       "Find peers, check their status and improve connectivity of your nodes",
     url: "/peers",
     image: null,
-    disabled: false,
+    disabled: true,
   },
   {
     title: "Validators Tracker",
