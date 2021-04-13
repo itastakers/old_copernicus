@@ -50,7 +50,7 @@ export default function MainLayout({ children }) {
       <CssBaseline />
       <AppBar position="relative" color="primary">
         <Toolbar>
-          <Typography variant="h6">Atlas | Cosmos Newtork Tracker</Typography>
+          <Typography variant="h6">Copernicus | Cosmos Network Tracker</Typography>
         </Toolbar>
       </AppBar>
 
@@ -59,7 +59,7 @@ export default function MainLayout({ children }) {
       {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
-          Atlas Cosmos Tracker
+          Copernicus Cosmos Tracker
         </Typography>
         <Typography
           variant="subtitle1"
@@ -74,7 +74,7 @@ export default function MainLayout({ children }) {
         </Typography>
         <Typography variant="body2" color="textSecondary" align="center">
           Contribute to this project on{" "}
-          <Link color="inherit" href="https://github.com/itastakers/atlas">
+          <Link color="inherit" href="https://github.com/itastakers/copernicus">
             GitHub
           </Link>
         </Typography>

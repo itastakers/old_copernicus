@@ -11,7 +11,7 @@ import {
 import HeroComponent from "../components/hero";
 import MainLayout from "../components/layout/main";
 import { makeStyles } from "@material-ui/core/styles";
-import { features } from "../atlas/configuration";
+import { features } from "../copernicus/configuration";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <MainLayout>
       <HeroComponent>
-        <Container maxWidth="sm">
+        <Container maxWidth="">
           <Typography
             component="h1"
             variant="h1"
@@ -60,7 +60,7 @@ export default function Home() {
             color="textPrimary"
             gutterBottom
           >
-            Atlas
+            Copernicus
           </Typography>
           <Typography
             variant="h5"
@@ -77,7 +77,7 @@ export default function Home() {
         {/* End hero unit */}
         <Grid container spacing={4}>
           {features.map((feature) => (
-            <Grid item key={feature.url} xs={12} sm={6} md={4}>
+            <Grid item key={feature.url} xs={12} sm={6} md={6}>
               <Card className={classes.card}>
                 <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5" component="h2">

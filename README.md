@@ -1,10 +1,10 @@
-# Atlas
+# Copernicus
 
 Cosmos Network testnets, upgrades, validators and peers tracker.
 
 ## Purpose
 
-[Cosmos Network](https://cosmos.network) is massive, just like our real universe. Is expanding every single day, and keeping track of the upcoming incentivized testnets or upgrades is getting difficult for most of the validators in the ecosystem. Atlas will help in this process, having a single place to look at without following 300 telegram or discord groups.
+[Cosmos Network](https://cosmos.network) is massive, just like our real universe. Is expanding every single day, and keeping track of the upcoming incentivized testnets or upgrades is getting difficult for most of the validators in the ecosystem. Copernicus will help in this process, having a single place to look at without following 300 telegram or discord groups.
 
 ## Projects submissions
 
