@@ -8,10 +8,10 @@ import {
   CardActions,
   CardMedia,
 } from "@material-ui/core";
-import HeroComponent from "../components/hero";
-import MainLayout from "../components/layout/main";
+import HeroComponent from "components/hero";
+import MainLayout from "components/layout/main";
 import { makeStyles } from "@material-ui/core/styles";
-import { features } from "../copernicus/configuration";
+import { features } from "copernicus/configuration";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
